@@ -8,7 +8,7 @@ namespace DiceGame
 {
     public class DiceParser
     {
-        public List<Dice> Parse(string[] args)
+        public List<Dice>? Parse(string[] args)
         {
             try {
                 var result = new List<Dice>();
