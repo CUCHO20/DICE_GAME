@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    internal class FairRandomGenerator
+    public class FairRandomGenerator
     {
-        private readonly SHA3_256 sHA3_256 = SHA3_256.Create();
+        private readonly SHA3_256 _sha3 = SHA3_256.Create();
 
         public int Generate(int range)
         {
