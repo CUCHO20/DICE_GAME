@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    internal class MenuHandler
+    public class MenuHandler
     {
+        private readonly FairRandomGenerator _fairRand = new();
+        
+        public MenuHandler(FairRandomGenerator fairRand)
+        {
+            _fairRand = fairRand;
+        }
+
         public int SelectDice(List<Dice> diceList, string role)
         {
             var prompt = new SelectionPrompt<string>()
@@ -31,9 +38,9 @@ namespace DiceGame
             return index;
         }
 
-        public int RollDice(FairRandomGenerator fairRand, Dice dice)
+        public int RollDice(Dice dice)
         {
-            int faceIndex = fairRand.Generate(dice.Faces.Count);
+            int faceIndex = _fairRand.Generate(dice.Faces.Count);
             return dice.Roll(faceIndex);
         }
     }
