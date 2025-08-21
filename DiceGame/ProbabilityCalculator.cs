@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    internal class ProbabilityCalculator
+    public class ProbabilityCalculator
     {
-        public static double[,] CalculatorProbabilites(List<Dice> diceList)
+        public static double[,] CalculatorProbabilities(List<Dice> diceList)
         {
             int n = diceList.Count;
             double[,] matrix = new double[n, n];

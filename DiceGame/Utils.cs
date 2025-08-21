@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    internal class Utils
+    public class Utils
     {
         public static int SecureRandomInt(int minInclusive, int maxExclusive) {
             var rng = RandomNumberGenerator.Create();

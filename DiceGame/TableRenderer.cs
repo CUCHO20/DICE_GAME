@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    internal class TableRenderer
+    public class TableRenderer
     {
         public static void RenderProbabilityTable(List<Dice> diceList, double[,] probabilities)
         {
